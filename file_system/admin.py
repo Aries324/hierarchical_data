@@ -1,3 +1,5 @@
 from django.contrib import admin
+from mptt.admin import DraggableMPTTAdmin
+from file_system.models import File_System
 
-# Register your models here.
+admin.site.register(File_System, DraggableMPTTAdmin)
