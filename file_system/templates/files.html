@@ -1,7 +1,10 @@
+{% extends 'base.html' %}
 {% load mptt_tags %}
+<!--https://django-mptt.readthedocs.io/en/latest/tutorial.html-->
+{% block content %}
 
 <ul>
-    <h1> File System </h1>
+
     {% recursetree files %}
         <li>
             {{ node.name }}
@@ -13,3 +16,5 @@
         </li>
     {% endrecursetree %}
 </ul>
+
+{% endblock %}
